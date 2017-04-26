@@ -13,7 +13,7 @@ namespace VariousFunctions
     static class Program
     {
         public static Timer IdleTimer = new Timer();
-        const int MinuteMicroseconds = 3000;
+        const int MinuteMicroseconds = 300000;
 
         /// <summary>
         /// Punto de entrada principal para la aplicación.
@@ -30,7 +30,7 @@ namespace VariousFunctions
             IdleTimer.Interval = MinuteMicroseconds;    // One minute; change as needed
             IdleTimer.Tick += TimeDone;
             IdleTimer.Start();
-            Application.Run(new Form1());
+            Application.Run(new formaInicioDeSesion());
             
         }
 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VariousFunctions
 {
-    public partial class Form1 : Form
+    public partial class formaInicioDeSesion : Form
     {
-        public Form1()
+        public formaInicioDeSesion()
         {
             InitializeComponent();
             
@@ -25,9 +25,14 @@ namespace VariousFunctions
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            formaMenuPrincipal form2 = new formaMenuPrincipal();
             this.Hide();
             form2.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
