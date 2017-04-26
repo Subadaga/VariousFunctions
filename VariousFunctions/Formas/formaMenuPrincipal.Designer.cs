@@ -92,6 +92,7 @@
             this.button6.TabIndex = 5;
             this.button6.Text = "Admon Usuarios";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -101,6 +102,7 @@
             this.button7.TabIndex = 6;
             this.button7.Text = "Salir";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // cachafasTexto
             // 
@@ -112,7 +114,7 @@
             this.cachafasTexto.TabIndex = 7;
             this.cachafasTexto.Text = "Dentro del sistema cachafas";
             // 
-            // Form2
+            // formaMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -125,7 +127,7 @@
             this.Controls.Add(this.menu2Boton);
             this.Controls.Add(this.menuBoton);
             this.Controls.Add(this.archivoBoton);
-            this.Name = "Form2";
+            this.Name = "formaMenuPrincipal";
             this.Text = "Form3";
             this.ResumeLayout(false);
             this.PerformLayout();

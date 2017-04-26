@@ -25,5 +25,18 @@ namespace VariousFunctions
             cachafasTexto.ForeColor = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
             
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Formas.formaAdministracionUsuarios formaAdminUsuarios = new Formas.formaAdministracionUsuarios();
+            this.Hide();
+            formaAdminUsuarios.Show();
+
+        }
     }
 }

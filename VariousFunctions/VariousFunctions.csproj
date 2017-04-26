@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formas\formaAdministracionUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\formaAdministracionUsuarios.Designer.cs">
+      <DependentUpon>formaAdministracionUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formas\formaInicioDeSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +65,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formas\formaAdministracionUsuarios.resx">
+      <DependentUpon>formaAdministracionUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formas\formaInicioDeSesion.resx">
       <DependentUpon>formaInicioDeSesion.cs</DependentUpon>
     </EmbeddedResource>
