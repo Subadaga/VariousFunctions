@@ -22,12 +22,19 @@ namespace VariousFunctions.Formas
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
+                    panelModificacionUsuarios.Visible = false;
                     panelBajaUsuarios.Visible = false;
                     panelAltaUsuarios.Visible = true;                   
                     break;
                 case 1:
                     panelAltaUsuarios.Visible = false;
+                    panelModificacionUsuarios.Visible = false;
                     panelBajaUsuarios.Visible = true;
+                    break;
+                case 2:
+                    panelAltaUsuarios.Visible = false;
+                    panelBajaUsuarios.Visible = false;
+                    panelModificacionUsuarios.Visible = true;
                     break;
             }
         }
