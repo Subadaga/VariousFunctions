@@ -12,6 +12,8 @@ namespace VariousFunctions
 {
     public partial class formaInicioDeSesion : Form
     {
+
+        
         public formaInicioDeSesion()
         {
             InitializeComponent();
@@ -25,9 +27,9 @@ namespace VariousFunctions
 
         private void button1_Click(object sender, EventArgs e)
         {
-            formaMenuPrincipal form2 = new formaMenuPrincipal();
+
             this.Hide();
-            form2.Show();
+            staticFormContainer.formaMenu.Show();
         }
 
         private void label2_Click(object sender, EventArgs e)

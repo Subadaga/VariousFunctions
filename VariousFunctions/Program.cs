@@ -12,6 +12,7 @@ namespace VariousFunctions
     
     static class Program
     {
+  
         public static Timer IdleTimer = new Timer();
         const int MinuteMicroseconds = 300000;
 

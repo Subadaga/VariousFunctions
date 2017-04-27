@@ -33,9 +33,8 @@ namespace VariousFunctions
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Formas.formaAdministracionUsuarios formaAdminUsuarios = new Formas.formaAdministracionUsuarios();
             this.Hide();
-            formaAdminUsuarios.Show();
+            staticFormContainer.admonUsuarios.Show();
 
         }
     }

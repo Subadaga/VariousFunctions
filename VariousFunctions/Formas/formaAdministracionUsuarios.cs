@@ -31,5 +31,11 @@ namespace VariousFunctions.Formas
                     break;
             }
         }
+
+        private void botonRegresar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            staticFormContainer.formaMenu.Show();
+        }
     }
 }
