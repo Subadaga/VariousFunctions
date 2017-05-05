@@ -130,6 +130,7 @@
             this.Controls.Add(this.archivoBoton);
             this.Name = "formaMenuPrincipal";
             this.Text = "Form3";
+            this.Load += new System.EventHandler(this.formaMenuPrincipal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

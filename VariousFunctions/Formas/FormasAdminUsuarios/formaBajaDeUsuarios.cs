@@ -30,5 +30,12 @@ namespace VariousFunctions.Formas.FormasAdminUsuarios
                 MessageBox.Show("El usuario ingresado no existe");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fillBaja.Clear();
+            staticFormContainer.formaAdminUsuarios.Show();
+        }
     }
 }

@@ -29,7 +29,28 @@ namespace VariousFunctions.Formas
                     this.Hide();
                     staticFormContainer.formaBajaUsuarios.Show();
                     break;
+                case 2:
+                    this.Hide();
+                    staticFormContainer.modificacionUsuarios.Show();
+                    break;
+                case 3:
+                    this.Hide();
+                    staticFormContainer.formaReseteoContrasena.Show();
+                    break;
+                case 4:
+                    this.Hide();
+                    staticFormContainer.desbloqueoUsuarios.Show();
+                    break;
+                case 6:
+                    this.Hide();
+                    staticFormContainer.listaDeUsuarios.Show();
+                    break;
             }
+        }
+
+        private void formaAdministracionUsuarios_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

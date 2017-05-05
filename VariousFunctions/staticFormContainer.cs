@@ -16,6 +16,10 @@ namespace VariousFunctions
         //Formas de la administracion de usuarios
         public static Formas.FormasAdminUsuarios.formaAltaDeUsuarios formaAltaUsuarios = new Formas.FormasAdminUsuarios.formaAltaDeUsuarios();
         public static Formas.FormasAdminUsuarios.formaBajaDeUsuarios formaBajaUsuarios = new Formas.FormasAdminUsuarios.formaBajaDeUsuarios();
+        public static Formas.FormasAdminUsuarios.modificacionUsuarios modificacionUsuarios = new Formas.FormasAdminUsuarios.modificacionUsuarios();
+        public static Formas.FormasAdminUsuarios.formaReseteoContrasena formaReseteoContrasena = new Formas.FormasAdminUsuarios.formaReseteoContrasena();
+        public static Formas.FormasAdminUsuarios.listaDeUsuarios listaDeUsuarios = new Formas.FormasAdminUsuarios.listaDeUsuarios();
+        public static Formas.FormasAdminUsuarios.formaDesbloqueoUsuario desbloqueoUsuarios = new Formas.FormasAdminUsuarios.formaDesbloqueoUsuario();
 
     }
 }

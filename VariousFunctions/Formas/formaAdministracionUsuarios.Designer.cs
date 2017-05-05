@@ -40,8 +40,8 @@
             "Alta de usuarios",
             "Baja de usuarios",
             "Cambios de usuario",
-            "Desbloqueo de un usuario",
             "Reseteo de contraseña",
+            "Desbloqueo de un usuario",
             "Definición de parámetros",
             "Generación de lista de usuarios",
             "Bitácoras"});
@@ -81,6 +81,7 @@
             this.Controls.Add(this.listBox1);
             this.Name = "formaAdministracionUsuarios";
             this.Text = "formaAdministracionUsuarios";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formaAdministracionUsuarios_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

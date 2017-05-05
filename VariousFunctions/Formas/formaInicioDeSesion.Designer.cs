@@ -95,6 +95,7 @@
             this.fillContrasena.Name = "fillContrasena";
             this.fillContrasena.Size = new System.Drawing.Size(100, 24);
             this.fillContrasena.TabIndex = 6;
+            this.fillContrasena.TextChanged += new System.EventHandler(this.fillContrasena_TextChanged);
             // 
             // formaInicioDeSesion
             // 
@@ -110,6 +111,7 @@
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "formaInicioDeSesion";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.formaInicioDeSesion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

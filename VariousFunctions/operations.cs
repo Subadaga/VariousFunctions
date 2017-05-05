@@ -54,7 +54,7 @@ namespace VariousFunctions
             newUser.AppendChild(ele);
 
             ele = doc.CreateElement("BO_Status");
-            ele.InnerText = "";
+            ele.InnerText = "false";
             newUser.AppendChild(ele);
 
             ele = doc.CreateElement("FE_UltimoAcceso");
@@ -65,8 +65,58 @@ namespace VariousFunctions
             ele.InnerText = "";
             newUser.AppendChild(ele);
 
+            ele = doc.CreateElement("IntentosDeContrasena");
+            ele.InnerText = "0";
+            newUser.AppendChild(ele);
+
             node.AppendChild(newUser);
             doc.Save(abc);
+
+        }
+
+        public static void agregarContrasenaAHistoria(String cuenta)
+        {
+            string abc = (System.IO.Directory.GetCurrentDirectory().ToString() + @"\Users.xml");
+            XmlDocument doc = new XmlDocument();
+            doc.Load(abc);
+
+            String path = "//Users/User[@ID='" + cuenta + "']";
+            XmlNodeList xnList = doc.SelectNodes(path);
+
+            String contrasena = xnList.Item(0).ChildNodes.Item(4).InnerText;
+            XmlElement ele = doc.CreateElement("Contrasena");
+            ele.InnerText = contrasena;
+            xnList.Item(0).ChildNodes.Item(10).AppendChild(ele);
+
+
+
+            doc.Save(abc);
+
+
+        }
+
+        public static bool contrasenaYaUsada(String cuenta, String nuevaContrasena)
+        {
+            string abc = (System.IO.Directory.GetCurrentDirectory().ToString() + @"\Users.xml");
+            XmlDocument doc = new XmlDocument();
+            doc.Load(abc);
+
+            String path = "//Users/User[@ID='" + cuenta + "']";
+            XmlNodeList xnList = doc.SelectNodes(path);
+
+            XmlNodeList contrasenasAntiguas = xnList.Item(0).ChildNodes.Item(10).ChildNodes;
+
+            foreach(XmlElement element in contrasenasAntiguas)
+            {
+                if (element.InnerText.Equals(nuevaContrasena))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }return false;
 
         }
 
@@ -79,7 +129,7 @@ namespace VariousFunctions
             String path = "//Users/User[@ID='" + cuenta + "']";
             XmlNodeList xnList = doc.SelectNodes(path);
 
-            if (xnList.Item(0).ChildNodes.Item(6).InnerText.Equals(false))
+            if (xnList.Item(0).ChildNodes.Item(6).InnerText.Equals("false"))
             {
                 return true;
             }
@@ -109,31 +159,6 @@ namespace VariousFunctions
             }
         }
 
-        public static void getUser(String cuenta)
-        {
-            string abc = (System.IO.Directory.GetCurrentDirectory().ToString() + @"\Users.xml");
-            XmlDocument doc = new XmlDocument();
-            doc.Load(abc);
-
-            String path = "//Users/User[@ID='" + cuenta + "']";
-            XmlNodeList xnList = doc.SelectNodes(path);
-
-            if (xnList.Item(0) == null)
-            {
-                MessageBox.Show("The requester user wasn't found");
-            }
-            else
-            {
-
-            }
-
-
-            MessageBox.Show(xnList.Item(0).ChildNodes.Item(0).InnerText);
-            xnList.Item(0).ChildNodes.Item(0).InnerText = "PENE PARADO Y ENORME";
-
-            doc.Save(abc);
-        }
-
         public static void darDeBaja(String cuenta)
         {
             string abc = (System.IO.Directory.GetCurrentDirectory().ToString() + @"\Users.xml");
@@ -146,6 +171,39 @@ namespace VariousFunctions
             xnList.Item(0).ChildNodes.Item(6).InnerText = "false";
 
             xnList.Item(0).ChildNodes.Item(7).InnerText = DateTime.Now.ToLongDateString() + "," + DateTime.Now.ToLongTimeString();
+            doc.Save(abc);
+
+
+        }
+
+        public static void modificarAtributo(String cuenta, int item, String newValue)
+        {
+            string abc = (System.IO.Directory.GetCurrentDirectory().ToString() + @"\Users.xml");
+            XmlDocument doc = new XmlDocument();
+            doc.Load(abc);
+
+            String path = "//Users/User[@ID='" + cuenta + "']";
+            XmlNodeList xnList = doc.SelectNodes(path);
+
+            xnList.Item(0).ChildNodes.Item(item).InnerText = newValue;
+
+
+            doc.Save(abc);
+
+
+        }
+
+        public static int obtenerNumeroIntentos(String cuenta)
+        {
+            string abc = (System.IO.Directory.GetCurrentDirectory().ToString() + @"\Users.xml");
+            XmlDocument doc = new XmlDocument();
+            doc.Load(abc);
+
+            String path = "//Users/User[@ID='" + cuenta + "']";
+            XmlNodeList xnList = doc.SelectNodes(path);
+            return Convert.ToInt32(xnList.Item(0).ChildNodes.Item(11).InnerText);
+
+
             doc.Save(abc);
 
 

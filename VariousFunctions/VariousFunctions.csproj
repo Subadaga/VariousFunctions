@@ -11,6 +11,22 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Amiga\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +47,18 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D0571DB124B8C97857CA8D98FCBA3988E8007AA6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>VariousFunctions_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,6 +73,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formas\FormasAdminUsuarios\formaDesbloqueoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\FormasAdminUsuarios\formaDesbloqueoUsuario.Designer.cs">
+      <DependentUpon>formaDesbloqueoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\FormasAdminUsuarios\formaReseteoContrasena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\FormasAdminUsuarios\formaReseteoContrasena.Designer.cs">
+      <DependentUpon>formaReseteoContrasena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\FormasAdminUsuarios\listaDeUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\FormasAdminUsuarios\listaDeUsuarios.Designer.cs">
+      <DependentUpon>listaDeUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formas\FormasAdminUsuarios\modificacionUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +146,15 @@
     <EmbeddedResource Include="Formas\FormasAdminUsuarios\formaBajaDeUsuarios.resx">
       <DependentUpon>formaBajaDeUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formas\FormasAdminUsuarios\formaDesbloqueoUsuario.resx">
+      <DependentUpon>formaDesbloqueoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\FormasAdminUsuarios\formaReseteoContrasena.resx">
+      <DependentUpon>formaReseteoContrasena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\FormasAdminUsuarios\listaDeUsuarios.resx">
+      <DependentUpon>listaDeUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formas\FormasAdminUsuarios\modificacionUsuarios.resx">
       <DependentUpon>modificacionUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,9 +176,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="VariousFunctions_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -36,13 +36,17 @@ namespace VariousFunctions
         {
             this.Hide();
             staticFormContainer.formaAdminUsuarios.Show();
-            operations.addUser("irvinmundo", "Irvin", "mundo", "Dude", "Presi", "123456");
 
         }
 
         private void archivoBoton_Click(object sender, EventArgs e)
         {
-            operations.getUser("irvinmundo");
+
+        }
+
+        private void formaMenuPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
