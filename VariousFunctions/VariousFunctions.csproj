@@ -45,7 +45,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CRUD.cs" />
+    <Compile Include="Formas\FormasAdminUsuarios\modificacionUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\FormasAdminUsuarios\modificacionUsuarios.Designer.cs">
+      <DependentUpon>modificacionUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operations.cs" />
+    <Compile Include="Formas\formaAdministracionUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\formaAdministracionUsuarios.Designer.cs">
+      <DependentUpon>formaAdministracionUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formas\formaInicioDeSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,14 +70,38 @@
     <Compile Include="Formas\formaMenuPrincipal.Designer.cs">
       <DependentUpon>formaMenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formas\FormasAdminUsuarios\formaAltaDeUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\FormasAdminUsuarios\formaAltaDeUsuarios.Designer.cs">
+      <DependentUpon>formaAltaDeUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\FormasAdminUsuarios\formaBajaDeUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\FormasAdminUsuarios\formaBajaDeUsuarios.Designer.cs">
+      <DependentUpon>formaBajaDeUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="staticFormContainer.cs" />
+    <EmbeddedResource Include="Formas\formaAdministracionUsuarios.resx">
+      <DependentUpon>formaAdministracionUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formas\formaInicioDeSesion.resx">
       <DependentUpon>formaInicioDeSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\formaMenuPrincipal.resx">
       <DependentUpon>formaMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\FormasAdminUsuarios\formaAltaDeUsuarios.resx">
+      <DependentUpon>formaAltaDeUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\FormasAdminUsuarios\formaBajaDeUsuarios.resx">
+      <DependentUpon>formaBajaDeUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\FormasAdminUsuarios\modificacionUsuarios.resx">
+      <DependentUpon>modificacionUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,9 +124,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Users.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

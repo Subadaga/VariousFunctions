@@ -27,9 +27,25 @@ namespace VariousFunctions
 
         private void button1_Click(object sender, EventArgs e)
         {
+             if (operations.userExists(fillCuenta.Text))
+             {
+                 if(operations.comparacionContrasenas(fillCuenta.Text, fillContrasena.Text))
+                 {
+                     this.Hide();
+                     staticFormContainer.formaMenu.Show();
+                }
+                else
+                {
+                    MessageBox.Show("El usuario o contraseña no existen");
+                }
+             }
+             else
+             {
+                 MessageBox.Show("El usuario o contraseña no existen");
+             }
 
-            this.Hide();
-            staticFormContainer.formaMenu.Show();
+
+
         }
 
         private void label2_Click(object sender, EventArgs e)

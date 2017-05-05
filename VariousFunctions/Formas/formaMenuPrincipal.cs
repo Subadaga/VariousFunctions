@@ -35,9 +35,14 @@ namespace VariousFunctions
         private void button6_Click(object sender, EventArgs e)
         {
             this.Hide();
+            staticFormContainer.formaAdminUsuarios.Show();
+            operations.addUser("irvinmundo", "Irvin", "mundo", "Dude", "Presi", "123456");
 
-            CRUD.addUser("irvinmundo", "Irvin", "Mundo", "Dude", "Presi", "123456");
+        }
 
+        private void archivoBoton_Click(object sender, EventArgs e)
+        {
+            operations.getUser("irvinmundo");
         }
     }
 }

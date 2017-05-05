@@ -46,6 +46,7 @@
             this.archivoBoton.TabIndex = 0;
             this.archivoBoton.Text = "Archivo";
             this.archivoBoton.UseVisualStyleBackColor = true;
+            this.archivoBoton.Click += new System.EventHandler(this.archivoBoton_Click);
             // 
             // menuBoton
             // 

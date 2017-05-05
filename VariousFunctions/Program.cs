@@ -4,6 +4,8 @@ using System.Linq;
 using System.Security.Permissions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+
 
 namespace VariousFunctions
 {
@@ -14,7 +16,7 @@ namespace VariousFunctions
     {
   
         public static Timer IdleTimer = new Timer();
-        const int MinuteMicroseconds = 300000;
+        static int MinuteMicroseconds = Convert.ToInt32(ConfigurationSettings.AppSettings["timeOut"]);
 
         /// <summary>
         /// Punto de entrada principal para la aplicación.
