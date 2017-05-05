@@ -10,7 +10,7 @@ namespace VariousFunctions
     {
         public static formaInicioDeSesion formaLogin = new formaInicioDeSesion();
         public static formaMenuPrincipal formaMenu = new formaMenuPrincipal();
-        public static Formas.formaAdministracionUsuarios admonUsuarios = new Formas.formaAdministracionUsuarios();
+        
 
     }
 }

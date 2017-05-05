@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace VariousFunctions
 {
@@ -34,7 +35,8 @@ namespace VariousFunctions
         private void button6_Click(object sender, EventArgs e)
         {
             this.Hide();
-            staticFormContainer.admonUsuarios.Show();
+
+            CRUD.addUser("irvinmundo", "Irvin", "Mundo", "Dude", "Presi", "123456");
 
         }
     }
